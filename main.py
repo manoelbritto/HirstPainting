@@ -1,5 +1,6 @@
 import colorgram
 from turtle import Turtle, Screen
+from random import choice, randint
 
 #Extract color from image
 # colors = colorgram.extract('image2.jpg', 30)
@@ -19,11 +20,25 @@ timy = Turtle()
 screen = Screen()
 screen.colormode(255)
 
-for x in range (100):
-    timy.setpos(x+10,0)
+timy.speed('fastest')
+dot_size = 20
+square_size = 10
+y_position = -250
+x_position = -250
+space_dots = 25
+
+for y in range (square_size):
+    timy.penup()
+    timy.setpos(x_position, y_position)
+    for x in range (square_size):
+        timy.pendown()
+        timy.dot(dot_size, choice(color_list))
+        timy.penup()
+        timy.fd(dot_size+space_dots)
+
+    y_position += dot_size+space_dots
 
 
 
 
 screen.exitonclick()
-
