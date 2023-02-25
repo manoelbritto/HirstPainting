@@ -1,6 +1,6 @@
 import colorgram
 from turtle import Turtle, Screen
-from random import choice, randint
+from random import choice
 
 #Extract color from image
 # colors = colorgram.extract('image2.jpg', 30)
