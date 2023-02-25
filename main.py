@@ -26,6 +26,7 @@ square_size = 10
 y_position = -250
 x_position = -250
 space_dots = 25
+timy.hideturtle()
 
 for y in range (square_size):
     timy.penup()
